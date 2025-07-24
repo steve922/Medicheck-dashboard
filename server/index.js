@@ -8,6 +8,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, '../public')));
 
+app.get('/api/hello', (_, res) => {
+  res.json({ msg: 'API OK' });
+});
+
 app.post('/api/refresh', async (_, res) => {
   await refreshAll();
   res.json({ status: 'done' });
