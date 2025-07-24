@@ -26,3 +26,13 @@ npm start
 ```
 
 Visit <http://localhost:3000> and you should see `API OK` rendered.
+
+## Fetching openFDA data
+
+An additional route `/api/510k` fetches sample records from the openFDA
+database. This uses `node-fetch` in the server. After installing
+dependencies you can test the endpoint directly:
+
+```bash
+curl http://localhost:8787/api/510k
+```

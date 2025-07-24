@@ -1,3 +1,4 @@
+// Basic Express server exposing simple API routes
 const express = require('express');
 const get510k = require('./fetchers/openfda');
 const app = express();
