@@ -5,14 +5,9 @@
   <title>Medicheck Dashboard</title>
 </head>
 <body>
-  <h1>Medicheck Dashboard</h1>
-  <button id="refreshBtn">\u624B\u52D5\u5237\u65B0</button>
-  <script>
-    document.getElementById('refreshBtn').addEventListener('click', function() {
-      fetch('/api/refresh', { method: 'POST' })
-        .then(() => alert('\u5DF2\u5237\u65B0'))
-        .catch(err => alert('Error: ' + err));
-    });
-  </script>
+  <div id="root"></div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
