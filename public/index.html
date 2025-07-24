@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Medicheck Dashboard</title>
+</head>
+<body>
+  <h1>Medicheck Dashboard</h1>
+  <button id="refreshBtn">\u624B\u52D5\u5237\u65B0</button>
+  <script>
+    document.getElementById('refreshBtn').addEventListener('click', function() {
+      fetch('/api/refresh', { method: 'POST' })
+        .then(() => alert('\u5DF2\u5237\u65B0'))
+        .catch(err => alert('Error: ' + err));
+    });
+  </script>
+</body>
+</html>
